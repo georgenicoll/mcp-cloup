@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-cloup"
+version = "0.1.0"
+description = "Utility for exposing the functions of a cloup CLI application as tools in an MCP server"
+dependencies = [
+    "cloup",
+    "fastmcp>=2.12.5",
+]
+requires-python = ">=3.12"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+addopts = [
+    "--import-mode=importlib",
+]
