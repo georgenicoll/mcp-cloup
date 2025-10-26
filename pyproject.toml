@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Utility for exposing the functions of a cloup CLI application as tools in an MCP server"
 dependencies = [
     "cloup",
-    "fastmcp>=2.12.5",
+    "fastmcp>=2.13.0",
 ]
 requires-python = ">=3.12"
 

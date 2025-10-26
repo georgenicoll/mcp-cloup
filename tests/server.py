@@ -1,12 +1,12 @@
 from fastmcp import FastMCP
-from mcp_cloup import setup_tools
+from mcp_cloup import setup_mcp_tools
 from .cli import main
 
 
 mcp = FastMCP("mcp_cloup")
 
 
-setup_tools(mcp, main)
+setup_mcp_tools(mcp, main)
 
 
 if __name__ == "__main__":

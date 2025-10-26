@@ -29,13 +29,26 @@ def subtract(x: int, y: int) -> int:
     return x - y
 
 
+@operations.group(name = 'advanced')
+def advanced_operations():
+    """Advanced operations"""
+    pass
+
+
+@advanced_operations.command()
+@cloup.argument('x', type=int, help="First Argument")
+def square(x: int) -> int:
+    """Square a number"""
+    return x * x
+
+
 @main.group()
 def other_operations():
     """Other operations"""
     pass
 
 
-@other_operations.command()
+@other_operations.command(name = 'add')
 @cloup.argument('x', type=float, help="First Argument")
 @cloup.argument('y', type=float, help="Second Argument")
 def addf(x: float, y: float) -> float:
@@ -43,7 +56,7 @@ def addf(x: float, y: float) -> float:
     return x + y
 
 
-@other_operations.command()
+@other_operations.command(name = 'subtract')
 @cloup.argument('x', type=float, help="First Argument")
 @cloup.argument('y', type=float, help="Second Argument")
 def subtractf(x: float, y: float) -> float:
